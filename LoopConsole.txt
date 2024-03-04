@@ -1,0 +1,107 @@
+    //Task 1 ////////////////
+
+            int FindNumbersDigit(int num)
+
+            {
+                int count = 0;
+
+                while (num != 0)
+                {
+                    num = num / 10;
+                    count++;
+                }
+                return count;
+            }
+            Console.WriteLine(FindNumbersDigit(10));
+
+
+
+            int FindPower(int n,int m)
+            {
+                int result = 1;
+                for (int i = 0; i < n; i++)
+                {
+                    result *=m;
+                }
+                return result;
+            }
+            Console.WriteLine(FindPower(2,5)+"result");
+
+            //Task 1/////////////
+
+            int FindUp(int n, int m)
+            {
+                int result = 1;
+                for (int i = 0; i < m; i++)
+                {
+                    result *= n;
+                }
+                return result;
+            }
+
+            Console.WriteLine(FindUp(2, 3));
+
+
+
+            //Task 3////////////////
+
+            int FindNumbersSum(int n)
+            {
+                int sum = 0;
+                while (n > 0)
+                {
+                    sum += n % 10;
+                    n /= 10;
+                }
+
+                return sum;
+            }
+            Console.WriteLine(FindNumbersSum(1250));
+        }
+
+        //Task 4////////////////
+
+        int FiveDigits(int num)
+        {
+            int last = 0;
+            int first = 0;
+            int sum = 0;
+            int square = 0;
+
+
+            last += num % 10;
+            first = num / 10000;
+
+            sum = first + last;
+            square = sum * sum;
+
+            return square;
+        }
+
+
+        //Task 5
+        int SumOfFirstThreeDigits(int num)
+        {
+            int firstDigit = num / 100000;
+            int secondDigit = (num / 10000) % 10;
+            int thirdDigit = (num / 1000) % 10;
+
+            // Toplamı 
+            int sum = firstDigit + secondDigit + thirdDigit;
+            return sum;
+        }
+
+        //Task 6//////
+
+        int OverageSum(int firstNum, int secondNum)
+        {
+            int sum = 0;
+            int min = Math.Min(firstNum, secondNum);
+            int max = Math.Max(firstNum, secondNum);
+
+            for (int i = min; i <= max; i++)
+            {
+                sum += i;
+            }
+            return sum;
+        }
